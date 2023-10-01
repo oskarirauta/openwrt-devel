@@ -1,0 +1,9 @@
+PKG_NAME?=$(PKG_SRC)-dev
+PKG_RELEASE?=1
+PKG_MAKEFILE_DIR?=$(TOPDIR)/package/$(PKG_PATH)
+PKG_SRC_CMD=$(shell echo "PKG_VERSION:= $(PKG_MAKEFILE_DIR)/Makefile head -n 1 cut -d = -f 2")
+PKG_SRC_VERSION?=$(shell grep -E "PKG_VERSION:=" $(PKG_MAKEFILE_DIR)/Makefile | head -n 1 | cut -d "=" -f 2)
+PKG_SRC_DIR?=$(BUILD_DIR)/$(PKG_SRC)$(if $(PKG_VERSION),-$(PKG_VERSION))
+PKG_SRC_INSTALL_DIR?=$(PKG_SRC_DIR)/ipkg-install
+PKG_VERSION:=$(PKG_SRC_VERSION)
+PKG_INSTALL_DIR:=$(PKG_SRC_INSTALL_DIR)
