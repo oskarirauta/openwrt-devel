@@ -32,7 +32,7 @@ define Build/Compile
 endef
 
 define Package/libubox-dev/install
-	$(INSTALL_DIR) $(1)/usr/include/libubox $(1)/lib $(1)/usr/lib/pkgconfig
+	$(INSTALL_DIR) $(1)/usr/include/libubox $(1)/lib
 	cp -r $(PKG_INSTALL_DIR)/usr/include/libubox/** $(1)/usr/include/libubox/
 	ln -s libblobmsg_json.so.$(PKG_SRC_SHORT_DATE) $(1)/lib/libblobmsg_json.so
 	ln -s libjson_script.so.$(PKG_SRC_SHORT_DATE) $(1)/lib/libjson_script.so
