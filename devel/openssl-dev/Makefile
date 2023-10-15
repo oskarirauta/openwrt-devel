@@ -22,6 +22,9 @@ define Package/$(PKG_NAME)-static-libraries
   DEPENDS:=+libopenssl +$(PKG_NAME)
 endef
 
+define Build/Prepare
+endef
+
 define Build/Configure
 endef
 
