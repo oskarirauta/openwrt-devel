@@ -3,6 +3,8 @@ include $(TOPDIR)/rules.mk
 PKG_SRC:=libubox
 PKG_PATH:=libs/libubox
 
+PKG_BUILD_DEPENDS:=ubox
+
 include ../header-package.mk
 include $(INCLUDE_DIR)/package.mk
 
