@@ -9,7 +9,7 @@ PKG_BUILD_DEPENDS:=uci ubox
 include ../header-package.mk
 include $(INCLUDE_DIR)/package.mk
 
-PKG_SRC_DIR:=$(BUILD_DIR)/uci-lua-53/$(PKG_SRC)$(if $(PKG_VERSION),-$(PKG_VERSION))
+PKG_SRC_DIR:=$(BUILD_DIR)/$(PKG_SRC)$(if $(PKG_VERSION),-$(PKG_VERSION))
 PKG_SRC_INSTALL_DIR:=$(PKG_SRC_DIR)/ipkg-install
 PKG_INSTALL_DIR:=$(PKG_SRC_DIR)/ipkg-install
 
