@@ -9,7 +9,7 @@ PKG_SRC_SHORT_COMMIT?=$(shell grep -E "PKG_SOURCE_VERSION:=" $(PKG_MAKEFILE_DIR)
 
 ifneq ($(PKG_SRC_COMMIT),)
   ifeq ($(PKG_SRC_VERSION),)
-    PKG_SRC_VERSION:=$(if $(PKG_SRC_DATE),$(PKG_SRC_DATE)-)$(PKG_SRC_SHORT_COMMIT)
+    PKG_SRC_VERSION := $(if $(PKG_SRC_DATE),$(subst -,.,$(PKG_SRC_DATE)),0)~$(call version_abbrev,$(PKG_SRC_SHORT_COMMIT))
   endif
 endif
 
