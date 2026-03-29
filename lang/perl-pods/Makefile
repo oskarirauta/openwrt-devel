@@ -32,8 +32,8 @@ define Build/Compile
 endef
 
 define Package/perl-pods/install
-	$(INSTALL_DIR) $(1)/usr/lib/perl$(PERL_MAJOR)/$(PERL_VERSION)/pods
-	$(INSTALL_DATA) $(PERL_SRC_DIR)/pod/*.pod $(1)/usr/lib/perl$(PERL_MAJOR)/$(PERL_VERSION)/pods/
+	$(INSTALL_DIR) $(1)/usr/lib/perl$(PERL_MAJOR)/$(PERL_VERSION2)/pods
+	$(INSTALL_DATA) $(PERL_SRC_DIR)/pod/*.pod $(1)/usr/lib/perl$(PERL_MAJOR)/$(PERL_VERSION2)/pods/
 endef
 
 $(eval $(call BuildPackage,perl-pods))
